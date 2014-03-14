@@ -1,0 +1,45 @@
+Ever had a full set of enchanted diamond, looked at a creeper, and be not even slightly scared - if anything glad to get free gunpowder?
+
+These will not be like that. If you see them, you will hopelessly cower in your house until they go away.
+
+To take on a pack of them will need a small squad of players.
+
+Narragak will look like a mix between an enderman and creeper, and something like a hydralisk. They will have a hunched, feral, savage look to them. Different coloration depending on their species.
+
+-Individually they will be able to take on only three or four zombies, but they will have advanced attack and hunting cooperation to where they will surround a player. They run once significantly injured, but once the player focuses another they will attack again. A lone one will attack a player with their back turned, but run once significantly hurt.
+
+-They are not hurt by daylight, though they will avoid it. During the day they will huddle in a group in the most enclosed area nearby.
+
+-A pack will attempt to surround a player, avoiding light sources, and attempting to put a wall between themself and a player, so the player doesn't see them. They do not attack until the entire pack is ready to strike, or if they think the player has spotted them. Their judgement of if a player has spotted them will depend on if a player has recently looked in their direction and suddenly starts to move away or dig, which will lead to players having to make terrified split second decisions.
+
+Spawning behavior: 
+Since they are such a large threat, they will only spawn if a nearby player's inventory contains diamonds or diamond items, and at a time around midnight. Small groups of them will leave if you give them a diamond.
+
+The pack nature of them will require a unique spawning system to where its not just 'spawn with a probability per chunk per time' and instead will be 'determine the specific time of night to spawn, spawn a single wave near a player at that specific time'
+
+
+Species:
+Each wave of narragak has unique appearance and an ability. Which forces players to make a split second decision on how to react to an attack.
+
+Bikgnar-
+Large head and mandibles, brown
+Can dig though dirt, sand, gravel, and other soft blocks.
+
+Thuuresh-
+Large arms and claws, dark purple
+Can climb like spiders
+
+Murktoltulokh-
+Short range (15m, same as skeleton) projectile spines, grass camoflauge.
+Dodge arrows
+
+Rhegpthak-
+Mostly transparent (around 0.15 opacity)
+Are consequentially difficult to see :p Behave the normally during the day
+
+Suggestions are welcomed.
+__________________________________________________________________
+
+I'm a very experienced modder so I will help with this when its easy for me, especially with advanced stuff like rendering effects; I will do the sound effects myself (will put them in this post once I make them).
+
+The issues are I have no experience dealing with the vanilla AI system, or knowing if that can even work for this. I'm currently very tied up with my main mod, T1A. I will end up doing this myself eventually, but that would be in several months at soonest. I plan on packaging these mobs with T1A, because the advanced weaponry it has renders most of the vanilla mobs harmless.

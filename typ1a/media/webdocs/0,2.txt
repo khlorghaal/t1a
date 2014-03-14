@@ -1,0 +1,56 @@
+After multiple lazy streaks which had many people worried, including myself, here it is.
+
+I've not finished nearly as much stuff as I should have in this amount of time, although Thutmose has done a ton, namely the explosions.
+
+
+Alpha 0.2 for 1.6.2, forge 9.10.0.789
+Assume it will eat your worlds and all you hold dear. It is absolutely necessary to make backup Worlds before using.
+Is still somewhat buggy/crashy, especially the nukes, do not detonate more than one at a time or shoot them into unloaded chunks.
+Don't bother reporting bugs/crashes unless you think it's something especially freaky.
+
+
+-Dedicated server works. 
+-"Open to LAN" may not work properly for some things. It probably never will as I dont care :d.
+-Everything works in SMP, afaik. Report things which behave differently in SMP/SSP.
+
+-Added creative tab
+
+-Added explosions, very fast and realistic, multithreaded, fallout. Vfx are "done" but dont work.
+-For demonstration/testing, TOW missiles are temporarily small nukes
+-IRBMs no longer fly retard
+-Added concrete. It flows and hardens and stuff. Thut is going to make it into a standalone mod, which I will still package with t1a.
+
+-Added a client-server autosynchronizing GUI API (yes, I made an API for an API, vanilla is that bad), GUIs are easy to make now.
+-Everything with equipment now has an equipment screen separate from its other GUIs
+-Toggle button to make input coordinates for things either relative or absolute. [REL/ABS]
+-Improved sentries overall; added a GUI with various behavior settings, unimplemented.
+
+-Added handheld suspensors - fully working.
+It's very difficult to implement fall damage based on player velocity, so I'm leaving fall damage off for now (the suspensor needs to be active).
+
+I can now say with no doubt that T1A is the best gun mod.
+-Added assault rifle
+-Bullets shatter windows, glass, and glowstone. Will later add config option for which blocks can break.
+-Fixed semi-autos being mashable.
+-Fixed bullets in loading chunks causing recoil
+-Added motion blur.
+-Added muzzle flash.
+-Rifle bolt animation finished
+-Bullets now pass around corners perfectly.
+-Bullets now spawn at the end of the gun barrel and not the center of the player. The placement is currently not good, will work on that later.
+
+Ricochet mechanics
+-Added realistic ricochet
+This is what I've spent the bulk of my time on, and I only got it working by using an imperfect algorithm. Bullets have a tendency to think the ground is higher than it actually is. I have no idea why atm.
+
+-Bullet Damage scales with speed.
+-Faster bullet and steeper angle with less blast resistant block -> less chance to ricochet.
+-Ricochet speed reduction decreases with higher blast resist.
+Basically, shotgun in obsidian corridor = deadly. Use sand/dirt to catch enemy bullets in your forts' hallways.
+
+-Fixed vehicles, then broke them again.
+
+
+I will make a minor 0.25 update soon for a few things including adjusting gun visual positioning, tracer rounds, gernades, and bettering reloading.
+
+Next big update will be focused on mechs/vehicles, will have prototype orbital lasers, and perhaps working nuke vfx.

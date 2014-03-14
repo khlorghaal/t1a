@@ -1,0 +1,102 @@
+This update took like 5x longer than planned, but I don't like working on the same thing for too long, so I ended up getting a ton of stuff done, including new features that haven't been announced yet.
+
+====
+-Added grenades.
+
+-Added smoke grenades.
+The current smoke effect has low particle count and has issues with draw order affecting transparency, although it still looks amazing. It is a placeholder until I can figure out GL instancing; 
+the finished effect will be done mostly on GPU, so it will have high particle count and won't lag.
+
+-Grenades are dyeable. Simply craft them with a vanilla dye.
+====
+
+====
+Complex crafting and durability system for smallarms. Will explain in video.
+
+-Added temporary crafting for parts. Will change once IC2 added
+-Decrafting allows for removing attachments or breaking a gun into its parts.
+
+-Individual guns parts have individual durability. Once a part breaks the gun needs reassembled.
+Once a part gets below 20% durability:
+Barrel: +30% spread
+Stock: +30% recoil
+Bolt: +5% chance to jam
+Action: +5% chance to jam
+
+All guns have a 1/250 chance to jam on every shot
+When jammed, shift+[reload] to forward assist
+
+-Added gun attachments
+Scope: decreases FoV to 10deg and adds mildots, todo calibrate mildots. I've decided to make scopes permanently zoomed; otherwise everyone would always use one all the time; this forces players to make a tactical decision
+Suppressor: removes muzzle flash and makes gun very quiet, increases bullet spread
+Muzzle brake: Decreases recoil, increases loudness(distance heard) and flash
+
+-Added Masterwork gun parts
+On crafting a gun part, there is a 1/20 chance for it to be a masterwork.
+The idea is that it will be impractical to craft parts just to get one, and they will be a highly valued trade commodity.
+Masterwork parts have different effects:
+Stock: decreases recoil
+Barrel: increases accuracy and speed
+Action: increases accuracy
+Bolt: increases speed
+All have 2x durability
+====
+
+====
+-FINALLY after literally DAYS of troubleshooting, bullets now behave perfectly. IT WAS BECAUSE VANILLA WAS SCREWING WITH THEM. HURRRRRRR. HURRRRRRRRRRRR.
+-Wrote my own Entity class for bullets and other things from scratch. Very minimal, and Client and Server instances are unsynchronized, causing about 10* better performance.
+
+I tried perfecting the algorithm for projectile movement, but I spent an entire day on it and got nowhere. However the current algorithm is good enough for bullets moving at non-sanic speeds.
+
+-Full automatics work properly on dedicated server now
+Client and server each do projectiles independently. This may cause issues with hitting moving targets? Please report findings.
+
+-Projectiles are no longer saved. This is to prevent the small possibility of an infinite loop or lag ruining a World
+
+-Projectiles now interact with water realisticly
+
+-Reloading non-magazine weapons (currently only the shotgun) cycles properly and is no longer mashable.
+
+-Added reload sound
+
+-Weapons stay held up a few seconds after firing.
+Because of vanilla's horridly inconsistent methodology, this simple feature took 4 hours to figure out. The solution is amazingly convoluted.
+
+-Bullets now ignore the red flash invulnerability
+Causes shotguns and smg to work much more realistically now. Nerfed their damage by a lot.
+====
+
+====
+-Added ammo system with different bullet types
+Was talking with Flan and he said his guns simply store their ammo stacks in their NBT, took this brilliantly simple princple to make a stack(as in push-pop) based ammo system.
+First rounds loaded are the last rounds fired
+
+-Ammo chambering works exactly like real guns.
+shift+[reload,default:r] to rack, pulling the bolt back and releasing it; will eject the round currently in chamber if there is one, and will chamber the next round in the magazine.
+If all rounds are fired before reloading, will need racked after reloading.
+
+-Added magazine loading gui, right click when holding a magazine.
+Todo make a machine block for reloading.
+
+Tracer: normal bullet, just glowy
+High Explosive: +20% damage (floored) destroys blocks with <41 blast resist on hit. Shotgun HE launches a small grenade.
+====
+
+====
+-Vehicles are driveable again. It took me 2 hours to find out that the problem was I was setting position wrong when constructing :c
+
+-Further refined packet system, complex vehicle keybinding, and tracking keys for multiple players in the same vehicle, are now possible
+
+-Vehicle motion is now smooth
+The current method I'm using is server-enforced rubberbanding. It works very nicely in a low jitter environment at non-fast speeds, and is unhackable.
+
+-Test mech equipped with temporary gun for testing.
+
+-Drop pods "work".
+Launch themselves in the air as soon as you get in, which is temporary.
+====
+
+
+
+Known bugs
+The slot a grenade is in on client does not update after being thrown
